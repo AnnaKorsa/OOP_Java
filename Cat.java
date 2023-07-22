@@ -3,11 +3,7 @@ package HW1;
 public class Cat {
     private String name;
     private int age;
-
-    public Cat(String name, int age) {
-        this.name = name;
-        this.age = age;
-    }
+    private Owner owner;
 
     public String getName(){
         return name;
@@ -21,8 +17,14 @@ public class Cat {
     public void setAge(int age){
         this.age = age;
     }
+    public Owner getOwner() {
+        return owner;
+    }
+    public void setOwner(Owner owner){
+        this.owner = owner;
+    }
     public void greet() {
-        System.out.printf("Мяу! Меня зовут %s. Мне %d лет.", name, age);
+        System.out.printf("Мяу! Меня зовут %s. Мне %d лет.Мой владелец - %s.", name, age, owner.getName());
     }
 }
 
